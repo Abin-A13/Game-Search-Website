@@ -30,7 +30,12 @@ const GenreList = ({ onSelectedGenre, sel_id }: Props) => {
               borderRadius="8px"
               src={getCroppedImageUrl(g.image_background)}
             />
-            <Button bgColor={sel_id === g.id ? "green" : " "} onClick={() => onSelectedGenre(g)} fontSize="lg">
+            <Button
+              bgColor={sel_id === g.id ? "green" : " "}
+              fontWeight={g.id === sel_id ? "bold" : "normal"}
+              onClick={() => onSelectedGenre(g)}
+              fontSize="lg"
+            >
               {g.name}
             </Button>
           </HStack>
